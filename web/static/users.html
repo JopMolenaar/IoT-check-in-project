@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employees page</title>
+    <link rel="stylesheet" href="styles/css/style.css" />
+    <link rel="stylesheet" href="styles/css/users.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="images/logoClock.png" alt="" />
+      <nav>
+        <ul>
+          <!-- <li><a href="#">Home</a></li> -->
+          <li><a href="list.html">Checked in</a></li>
+          <li><a class="active" aria-current="page" href="#">Employees</a></li>
+          <li><a href="statistics.html">Statistics</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Employees</h1>
+      <div>
+        <section>
+          <h2>Employees table</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Passnumber</th>
+                <th>---</th>
+              </tr>
+            </thead>
+            <tbody id="getUsers"></tbody>
+          </table>
+        </section>
+        <form>
+          <label>Name: <input type="text" name="name" /></label>
+          <label>Passnumber: <input type="text" name="passnumber" /></label>
+          <button type="button" name="submit">Submit</button>
+        </form>
+      </div>
+      <button id="testBtn">Test scan device</button>
+      <img src="images/clockFrontendIoT.png" alt="" />
+    </main>
+    <script src="js/getUsers.js"></script>
+    <script src="js/testDevice.js"></script>
+  </body>
+</html>

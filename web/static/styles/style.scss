@@ -1,0 +1,82 @@
+$color-background: rgb(44, 44, 75);
+$color-header: rgb(44, 44, 75);
+$color-text-wh: rgb(229, 229, 229);
+$color-delete: rgb(189, 15, 15);
+
+.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: $color-background;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  header {
+    background-color: $color-header;
+    height: 5em;
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+    padding: 0.5em;
+    padding-right: 2em;
+    padding-left: 1em;
+    align-items: center;
+    img {
+      width: 2.5em;
+      height: 2.5em;
+    }
+    nav {
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      font-size: 1.2em;
+      ul {
+        display: flex;
+        align-items: left;
+        justify-content: space-between;
+        padding: 0;
+        flex-direction: row;
+        height: 100%;
+        margin: 0;
+        li {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          list-style: none;
+          margin: 0 0.5em 0 0.5em;
+          a {
+            text-decoration: none;
+            color: $color-text-wh;
+          }
+        }
+      }
+    }
+  }
+  button {
+    background-color: #08d;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    text-align: center;
+    width: 100%;
+  }
+  button:active {
+    color: #8f8f8f;
+  }
+  button:hover {
+    background-color: #06b;
+  }
+  footer {
+    position: absolute;
+    transform: translateY(15%);
+  }
+}

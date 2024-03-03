@@ -1,0 +1,5 @@
+*.pyc
+dist/
+mdocotion.egg-info/
+build/
+mkdocs_macros_mdocotion.egg-info/

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Statistics page</title>
+    <link rel="stylesheet" href="styles/css/style.css" />
+    <link rel="stylesheet" href="styles/css/charts.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="images/logoClock.png" alt="" />
+      <nav>
+        <ul>
+          <!-- <li><a href="#">Home</a></li> -->
+          <li><a href="list.html">Checked in</a></li>
+          <li><a href="users.html">Employees</a></li>
+          <li><a class="active" aria-current="page" href="#">Statistics</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div>
+        <section>
+          <h2>Work hours p/person (Week)</h2>
+          <canvas id="workWeek"></canvas>
+        </section>
+        <section>
+          <h2>Work hours p/person (Month)</h2>
+          <canvas id="workMonth"></canvas>
+        </section>
+        <section>
+          <h2>Lunch minutes p/person (Month)</h2>
+          <canvas id="lunchWeek"></canvas>
+        </section>
+      </div>
+
+      <img src="images/clockFrontendIoT.png" alt="" />
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/charts.js"></script>
+  </body>
+</html>

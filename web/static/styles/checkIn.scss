@@ -1,0 +1,153 @@
+$color-background: rgb(44, 44, 75);
+$color-header: rgb(44, 44, 75);
+$color-section: rgb(35, 35, 76);
+$color-text-bl: black;
+$color-text-wh: rgb(229, 229, 229);
+$color-borders: black;
+$color-table: rgb(153, 153, 188);
+$color-table-lines: rgb(41, 65, 97);
+$color-delete: rgb(189, 15, 15);
+$color-delete-hover: rgb(159, 11, 11);
+$color-wh: white;
+
+main {
+  padding-left: 2em;
+  padding-right: 2em;
+  margin: 0;
+  position: relative;
+  min-height: fit-content;
+  padding-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100% - 7em);
+
+  h1 {
+    margin: 0;
+    margin-top: 2em;
+    color: $color-text-wh;
+  }
+
+  div {
+    width: 100%;
+    min-width: fit-content;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    section:nth-child(1),
+    section:nth-child(2) {
+      background-color: $color-section;
+      padding: 0.5em;
+      border-radius: 10px;
+      margin-top: 2em;
+      max-width: 30em;
+      width: 50%;
+      h2 {
+        margin: 0;
+        color: $color-text-wh;
+      }
+    }
+    section:nth-child(1),
+    section:nth-child(2) {
+      z-index: 1;
+      padding: 1em;
+      min-height: 15em;
+      height: fit-content;
+      width: 100%;
+
+      overflow: hidden;
+      display: flex;
+      padding-top: 1em;
+      flex-direction: column;
+      h2 {
+        margin-bottom: 1em;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 30em;
+        background-color: $color-wh;
+        thead {
+          background-color: $color-table;
+        }
+        td,
+        th {
+          border: 1px solid $color-table-lines;
+          text-align: left;
+          padding: 8px;
+        }
+        td {
+          a {
+            display: flex;
+            justify-content: center;
+            background-color: $color-delete;
+            text-decoration: none;
+            color: $color-text-wh;
+            padding: 0.2em;
+          }
+          a:hover {
+            background-color: $color-delete-hover;
+            transition: 200ms;
+          }
+        }
+
+        tr:nth-child(even) {
+          background-color: $color-table;
+        }
+      }
+    }
+  }
+  > img {
+    display: none;
+  }
+}
+
+@media (min-width: 55em) {
+  main {
+    align-items: start;
+    div {
+      align-items: start;
+      flex-direction: row;
+      gap: 2em;
+      justify-content: space-between;
+      section:nth-child(1) {
+        height: 40em;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+      section:nth-child(2) {
+        max-width: 25em;
+        max-height: 40em;
+        overflow-y: hidden;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+    }
+  }
+}
+
+@media (min-width: 75em) {
+  main {
+    align-items: center;
+    div {
+      align-self: end;
+      max-width: 73em;
+      justify-content: space-around;
+    }
+    > img {
+      display: flex;
+      width: 40%;
+      height: auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 0.3;
+    }
+  }
+}

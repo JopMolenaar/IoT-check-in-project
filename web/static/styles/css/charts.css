@@ -1,0 +1,54 @@
+main {
+  width: 100%;
+  height: 100%;
+}
+main div {
+  margin: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  justify-content: center;
+  max-width: 90em;
+}
+main div section {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(35, 35, 76);
+  padding: 1em;
+  border-radius: 10px;
+  margin-top: 2em;
+  width: 25em;
+  height: 14em;
+}
+main div section h2 {
+  margin: 0;
+  color: rgb(229, 229, 229);
+}
+main > img {
+  display: none;
+}
+
+@media (min-width: 40em) {
+  main div section {
+    width: 30em;
+    height: 17em;
+  }
+}
+@media (min-width: 60em) {
+  main div section {
+    width: 30em;
+    height: 17em;
+  }
+}
+@media (min-width: 70em) {
+  main div {
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+}
+@media (min-width: 85em) {
+  main div section {
+    width: 40em;
+    height: 23em;
+  }
+}
